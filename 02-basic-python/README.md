@@ -19,9 +19,13 @@ Python 3.7.2 (default, Dec 29 2018, 00:00:04)
 Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
-What does this tell us? It shows us the version number of Python (3.7.2), and we can see that we've installed Anaconda. At the end of this statement, you see the three `>>>` signs: these indicate a promt, but it looks different from your console promt (`$`), to indicate you're in an interactive python environment.
+What does this tell us? It shows us the version number of Python (3.7.2), and we can see that we've installed Anaconda. At the end of this statement, you see the three `>>>` signs: these indicate a prompt, but it looks different from your console prompt (`$` or `%`), to indicate you're in an interactive python environment.
 
-There are two fundamental ways you can run Python: in interactive mode (what we're doing here) or in batch mode. In interactive mode you write your program interactively, i.e., each new statement is interpreted as you type it. If you just run ```python``` without any other parameter, you enter the **interactive** mode. Let's write our very first program:
+There are two fundamental ways you can run Python: in interactive mode (what we're doing here) or in batch mode. 
+
+In interactive mode you write your program interactively, i.e., each new statement is interpreted as you type it. 
+
+If you just run ```python``` without any other parameter, you enter the **interactive** mode. Let's write our very first program:
 
 ```python
 >>> print("Hello World!")
@@ -32,7 +36,9 @@ Hello World!
 
 "Hello World!" is by tradition the very first program that you should write in a new programming language! And see, when we instructed python to print the text "Hello World!", it did just that.
 
-So, let's briefly take that statement apart: it contains a call to the `print()` function and passes a parameter to that print function, the string `Hello World!`. The string is enclosed in quotation marks `"`. Given that information, python knows you want to print the string, and it does exactly that.
+So, let's briefly take that statement apart: it contains a call to the `print()` function and passes a parameter to that print function, the string `Hello World!`. 
+
+The string is enclosed in quotation marks `"`. Given that information, python knows you want to print the string, and it does exactly that.
 
 Print is a built-in function of python, there are several built-in functions, which you can check out [here](https://docs.python.org/3/library/functions.html).
 
@@ -42,7 +48,7 @@ If you're familiar with Python, you might have seen this syntax:
 >>> print "Hello World!"
 ```
 
-This is Python 2 syntax and not legal in Python 3 anymore, now all parameters of a function have to be passed in brackets.
+This is Python 2 syntax and not legal in Python 3 anymore, now all parameters of a function have to be passed in brackets. Python 2 is now [officially retired](https://pythonclock.org/), so you should not be using it anymore.  
 
 Let's define our first variable. Type
 
@@ -53,8 +59,9 @@ Let's define our first variable. Type
 This statement is executed without any feedback. What you're doing here, intuitively, is that first, you create a new variable of type string with the name ```my_string_var```, and then you assign a value to it, "Are you still spinning?".
 
 
-Note that the equals sign `=` is NOT a test for equality here, but an ASSIGNMENT. This can be confusing for beginning programmers. Equality is tested with a double equals sign `==` in many programming languages including python. Arguably, a different assignment operator such as `:=` would be a better idea and is implemented in other programming languages.
+Note that the equals sign `=` is NOT a test for equality here, but an ASSIGNMENT. This can be confusing for beginning programmers. 
 
+Equality is tested with a double equals sign `==` in many programming languages including python. Arguably, a different assignment operator such as `:=` would be a better idea and is implemented in other programming languages.
 
 We now can print this variable:
 
@@ -92,21 +99,21 @@ The data types of `a` and `b`, however, are subtly different. `a` is an integer 
 <class 'str'>
 ```
 
-Python supports many operations, including mathemtical operations (addition, substraction, division, modulo), type conversions, etc. - we'll explore those soon.
+Python supports many operations, including mathematical operations (addition, subtraction, division, modulo), type conversions, etc. - we'll explore those soon.
 
 ### Exercise: Data types and operations
 
 Play around with data types and operations. Try the following things:
 
- * Define two variables and assign an integer to the first and a float to the second. Define a new variable and assign the sum of the previous two variables. What's the data type of the third variable?
- * Reassign a variable with a different data type, e.g., take one of your numerical variables and assign a string to it. What's the new data type?
- * Try what happens if you try to add a string to a string?
- * Try what happens if you add a string to a float or an integer.
+ 1. Define two variables and assign an integer to the first and a float to the second. Define a new variable and assign the sum of the previous two variables. What's the data type of the third variable?
+ 2. Reassign a variable with a different data type, e.g., take one of your numerical variables and assign a string to it. What's the new data type?
+ 3. See what happens if you try to add a string to a string.
+ 4. See what happens if you add a string to a float or an integer.
 
 
 ## Writing code in a file
 
-For now, though, let's look at another way to run python: by executing a file. Exit the interactive environment, by calling the exit function:
+Let's look at another way to run python: by executing a file. Exit the interactive environment, by calling the exit function:
 
 ```python
 exit()
@@ -121,7 +128,7 @@ def double_number(a):
     # btw, here is a comment! Use the # symbol to add comments or temporarily remove code
     # shorthand operator for 'a = a * 2'
     a *= 2
-    return a;
+    return a
 
 print(double_number(3))
 print(double_number(14.22))
